@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بازی مکالمه عربی</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <div id="app">
+    <h1 id="title">بازی مکالمه عربی 🗣️</h1>
+    <div id="status">
+      <span id="lesson-title"></span>
+      <span id="score">امتیاز: 0</span>
+      
+    </div>
+
+    <div id="game-box">
+        <button id="start" onclick="startGame()">شروع بازی</button>
+      <p id="question"></p>
+      <div id="options"></div>
+    </div>
+
+    <button id="next-btn" class="hidden">مرحله بعد ▶️</button>
+  </div>
+  <div id="timer"></div>
+<div id="modal">
+  <div id="modal-content">
+    <h2>⏰ زمان به پایان رسید!</h2>
+    <p id="final-score"></p>
+    <button id="reset-btn">شروع دوباره 🔄</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

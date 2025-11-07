@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "IranYekan";
+    src:
+        url("assets/IRANyekan.ttf");
+}
+*{
+  font-family: "IranYekan";
+}
+body {
+  font-family: "IranYekan", sans-serif;
+  background-color: #d6f5d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#modal {
+  display: none; /* پیش‌فرض پنهان */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#modal-content h2 {
+  margin-bottom: 15px;
+}
+
+#modal-content button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#modal-content button:hover {
+  background-color: #218838;
+}
+
+
+#timer {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 128, 0, 0.3);
+  text-align: center;
+  min-width: 150px;
+  transition: all 0.3s ease;
+  z-index: 100;
+  font-family: "IranYekan";
+}
+
+#timer.warning {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  box-shadow: 0 0 15px rgba(255, 94, 98, 0.4);
+}
+
+#timer.danger {
+  background: linear-gradient(135deg, #ff0000, #ff416c);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+#app {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  color: #1b8c1b;
+  margin-bottom: 10px;
+}
+
+#status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+#question {
+  font-size: 22px;
+  margin: 20px 0;
+  direction: rtl;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-top: 3px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.hidden {
+  display: none;
+}
+
+.toastify{
+  border-radius: 50px !important;
+}
