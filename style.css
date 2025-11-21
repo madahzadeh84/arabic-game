@@ -60,8 +60,8 @@ body {
 #timer {
   position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20%;
+  /* transform: translateX(-50%); */
   background: linear-gradient(135deg, #00b09b, #96c93d);
   color: #fff;
   font-size: 28px;
@@ -143,4 +143,10 @@ button:hover {
 
 .toastify{
   border-radius: 50px !important;
+}
+
+@media screen and (min-width: 1024px){
+  #timer {
+  transform: translateX(-50%);
+}
 }
