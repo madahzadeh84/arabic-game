@@ -14,7 +14,7 @@ const question = document.getElementById("question");
 const optionsDiv = document.getElementById("options");
 const startbtn = document.getElementById("start");
 const resetbtn = document.getElementById("reset-btn");
-let time = 300;
+let time = 120;
 let isStarted = false;
 
 function loadExercise() {
@@ -77,7 +77,8 @@ function checkAnswer(correct) {
         alert("🎉 مرحله " + lesson.title + " تمام شد!");
         loadExercise();
       } else {
-        question.textContent = "🌟 تبریک! همه‌ی مراحل رو گذروندی!";
+        alert("تبریک! همه ی مراحل رو گذروندی");
+        showModal();
         optionsDiv.innerHTML = "";
       }
     }
@@ -86,7 +87,7 @@ function checkAnswer(correct) {
   } else {
     Toastify({
       text: "جوابت اشتباه بود.",
-      duration: 10000,
+      duration: 3000,
       destination: "https://github.com/apvarun/toastify-js",
       newWindow: true,
       close: true,
@@ -137,7 +138,8 @@ function showModal() {
   const modal = document.getElementById("modal");
   const finalScore = document.getElementById("final-score");
   finalScore.textContent = "امتیاز نهایی شما: " + score;
-  modal.style.display = "flex";
+  modal.style.display = "flex"
+  clearInterval(timerCount);
 }
 
 document.getElementById("reset-btn").onclick = function () {
@@ -152,7 +154,7 @@ function resetGame() {
   lessonIndex = 0;
   exIndex = 0;
   score = 0;
-  time = 300;
+  time = 120;
   isStarted = false;
 
   // بازگرداندن حالت اولیه صفحه
